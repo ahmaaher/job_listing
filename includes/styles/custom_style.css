@@ -1,0 +1,8 @@
+.header .text-muted{display: inline-block;color: rgba(0,0,0,0.3)!important;}
+.header ul.pull-right{float: right;}
+.header ul li{border-radius: 7px;margin-left: 3px;}
+.header ul li.active a{color: #fff;background-color: #337ab7;}
+.header ul li a{text-decoration: none;display: block;padding: 10px;border-radius: 7px;}
+.header ul li a:hover{color: #fff;background-color: #337ab7;}
+.jumbotron{padding-right: 60px;padding-left: 60px;}
+.veiw_btn a{background-color: rgba(0,0,0,0.3);border: none;}
