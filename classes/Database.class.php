@@ -49,10 +49,10 @@ class Database{
 		$this->stmt->execute();
 		return $this->stmt->fetchAll(PDO::FETCH_OBJ); // fetch the result as object not associative array
 	}
-
+	
 	function result_single(){
 		$this->stmt->execute();
-		return $this->stmt->fetch(PDO::FETCH_OBJ); // fetch the result as object not associative array
+		return $this->stmt->fetch(PDO::FETCH_OBJ); // fetch the result as object not array
 	}
 
 	function selectSingleQuery($q){
@@ -65,6 +65,7 @@ class Database{
 		return $this->result_set();
 	}
 	
+	// To check if a specific record is exists in the database
 	function checkItem($q){
 		$this->query($q);
 		$this->stmt->execute();
