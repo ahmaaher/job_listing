@@ -9,7 +9,7 @@ function redirect($link = null, $msg = null, $msg_type = null){
 	header("Location: " . $location); exit;
 }
 
-function displayMessage(){
+function getRedirectMsg(){
 	if(!empty($_SESSION['msg'])){
 		if(!empty($_SESSION['msg_type'])){
 

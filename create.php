@@ -14,9 +14,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 	$data['email'] 		 = $_POST['email'];
 
 	if($jobs->create($data)){
-		redirect("", "Your job has been listed", "success");
+		redirect("index.php", "Your job has been listed", "success");
 	}else{
-		redirect("", "Something went wrong", "error");
+		redirect("index.php", "Something went wrong", "error");
 	}
 
 }

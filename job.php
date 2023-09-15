@@ -1,7 +1,7 @@
 <?php
 include_once "includes/ini.php";
 
-if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['edit'])){
+if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['edit'])){ // Edit page
 	$job_id = isset($_GET['id']) && is_numeric($_GET['id']) ? $_GET['id'] : 0;
 
 	$jobs = new Jobs;
@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['edit'])){
 	}
 	echo $job_single;
 
-}elseif($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['update'])){
+}elseif($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['update'])){  // Update page
 	
 	$jobs = new Jobs;
 	$job_id = $_POST['id'];
@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['edit'])){
 		redirect("?id=$job_id", "Something went wrong", "error");
 	}
 
-}elseif($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['delete'])){
+}elseif($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['delete'])){  // Delete page
 	$jobs = new Jobs;
 	$job_id = $_POST['id'];
 

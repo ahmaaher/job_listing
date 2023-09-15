@@ -6,7 +6,7 @@
 	<p class="lead"><?php echo $job->description; ?></p>
 	<ul class="list-group">
 		<li class="list-group-item"><?php echo $job->company; ?></li>
-		<li class="list-group-item"><?php echo $job->salary; ?> LE</li>
+		<li class="list-group-item"><?php echo $job->salary; ?>k</li>
 		<li class="list-group-item"><?php echo $job->email; ?></li>
 	</ul>
 	<br><br>

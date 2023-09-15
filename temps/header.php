@@ -18,4 +18,4 @@
 					</ul>
 				</nav>
 			</div>
-			<?php displayMessage(); ?>
+			<?php getRedirectMsg(); ?>
