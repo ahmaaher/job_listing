@@ -9,6 +9,7 @@ class Jobs extends Database{
 		return $this->result_set();
 	}
 
+	// Getting jobs based on specific category
 	function getByCategory($cat){
 		$this->query("SELECT jobs.*, categories.name AS cat_n FROM jobs
 						INNER JOIN categories ON jobs.cat_id = categories.id
@@ -18,6 +19,7 @@ class Jobs extends Database{
 		return $this->result_set();
 	}
 
+	// Creating new job
 	function create($data){
 		//Insert query
 		$this->query("INSERT INTO jobs (cat_id, company, job_title, description, salary, location, user, email)
@@ -37,6 +39,7 @@ class Jobs extends Database{
 		if($this->execute()){ return true; }else{ return false; }
 	}
 
+	// Updating job
 	function update($job_id, $data){
 		//Insert query
 		$this->query("UPDATE jobs
@@ -63,6 +66,7 @@ class Jobs extends Database{
 		if($this->execute()){ return true; }else{ return false; }
 	}
 
+	// Deleting job
 	function delete($job_id){
 		$this->query("DELETE FROM jobs WHERE id = $job_id");
 		if($this->execute()){ return true; }else{ return false; }
