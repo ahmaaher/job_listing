@@ -6,3 +6,9 @@
 .header ul li a:hover{color: #fff;background-color: #337ab7;}
 .jumbotron{padding-right: 60px;padding-left: 60px;}
 .veiw_btn a{background-color: rgba(0,0,0,0.3);border: none;}
+/*====================== Job Page ======================*/
+.go_back{text-decoration: none;padding: 10px;border-radius: 7px;}
+.go_back:hover{color: #fff;background-color: #337ab7;}
+/*====================== Create New Job Page ======================*/
+.cn_fg{margin-top: 20px;}
+.cn_fg label{margin-bottom: 5px;}

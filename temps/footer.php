@@ -1,5 +1,5 @@
 			<footer class="footer">
-				<p>&copy; 2023 JobListing by Maher.</p>
+				<p>&copy; <?php echo date("Y") . " " . SITE_TITLE; ?> by Maher.</p>
 			</footer>
 
 		</div> <!-- /container -->

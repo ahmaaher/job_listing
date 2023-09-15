@@ -27,6 +27,8 @@ class Database{
 
 	function query($q){ $this->stmt = $this->dbh->prepare($q); }
 
+	function execute(){ return $this->stmt->execute(); }
+
 	function bind($param, $value, $type = null){
 		if(is_null($type)){
 			switch(true){
@@ -52,6 +54,23 @@ class Database{
 		$this->stmt->execute();
 		return $this->stmt->fetch(PDO::FETCH_OBJ); // fetch the result as object not associative array
 	}
+
+	function selectSingleQuery($q){
+		$this->query($q);
+		return $this->result_single();
+	}
+
+	function selectSetQuery($q){
+		$this->query($q);
+		return $this->result_set();
+	}
+	
+	function checkItem($q){
+		$this->query($q);
+		$this->stmt->execute();
+		return $this->stmt->rowCount();
+	}
+
 }
 
 
